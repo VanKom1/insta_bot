@@ -1,0 +1,6 @@
+username = ""
+password = ""
+proxy_login = ""
+proxy_password = ""
+proxy_port = ""
+proxy = f"http://{proxy_login}:{proxy_password}@{proxy_port}"
