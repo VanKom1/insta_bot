@@ -31,7 +31,7 @@ class MadeContent:
     def __init__(self, client):
         self.cl = client 
 
-    def made_post(image,text,users,post_location):
+    def made_post(self,image,text,users,post_location):
         self.cl.photo_upload(
             path = image, # Путь к картинке
             caption = text, # Описание поста 
@@ -52,6 +52,13 @@ class MadeContent:
 
     def made_video_story(self,video):
         self.cl.video_upload_to_story(video)
+
+    def made_reals(self,video_path,thumbnail_path):
+        self.cl.video_upload_to_reel(
+            video_path, # путь к видео
+            thumbnail_path, # путь к превью
+            caption = "" # Описание/текст под вашим рилсом
+        )
 
 
 cl = Client() # Создание пользователя 
