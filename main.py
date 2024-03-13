@@ -53,15 +53,15 @@ class MadeContent:
     def made_video_story(self,video):
         self.cl.video_upload_to_story(video)
 
-    def made_reals(self,video_path,thumbnail_path):
-        self.cl.video_upload_to_reel(
+    def made_reals(self,video_path,text,thumbnail_path):
+        self.cl.clip_upload(
             video_path, # путь к видео
+            text, # Описание/текст под вашим рилсом
             thumbnail_path, # путь к превью
-            caption = "" # Описание/текст под вашим рилсом
+
         )
 
 
 cl = Client() # Создание пользователя 
 cl.set_proxy(config.proxy) # Настройка прокси
 cl.login(config.username, config.password) # Вход в систему для дальнейших действий
-
